@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   StatusBar,
   Image,
-  TouchableWithoutFeedback,
+  TouchableHighlight,
 } from "react-native";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
@@ -17,7 +17,7 @@ export default function App() {
     <Provider store={store}>
       <SafeAreaView style={styles.container}>
         <Text>This is a todo app</Text>
-        <TouchableWithoutFeedback onPress={() => console.log("image tapped")}>
+        <TouchableHighlight onPress={() => console.log("image tapped")}>
           <Image
             fadeDuration={1000}
             source={{
@@ -26,7 +26,7 @@ export default function App() {
               uri: "https://picsum.photos/200/300",
             }}
           />
-        </TouchableWithoutFeedback>
+        </TouchableHighlight>
         {/* <StatusBar style="auto" /> */}
         <ToDo />
       </SafeAreaView>
