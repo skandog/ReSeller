@@ -7,6 +7,7 @@ import {
   StatusBar,
   Image,
   TouchableHighlight,
+  TouchableNativeFeedback,
 } from "react-native";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
@@ -27,6 +28,17 @@ export default function App() {
             }}
           />
         </TouchableHighlight>
+        {/* Bative only really works with views, and not on iOS */}
+        <TouchableNativeFeedback>
+          <View
+            style={{
+              width: 200,
+              height: 70,
+              backgroundColor: "tomato",
+              marginTop: 20,
+            }}
+          ></View>
+        </TouchableNativeFeedback>
         {/* <StatusBar style="auto" /> */}
         <ToDo />
       </SafeAreaView>
