@@ -1,5 +1,5 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+// import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -7,11 +7,11 @@ import store from "./store";
 export default function App() {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your buuuuggomg app!</Text>
+      <SafeAreaView style={styles.container}>
+        <Text>This is a todo app</Text>
         <StatusBar style="auto" />
         <ToDo />
-      </View>
+      </SafeAreaView>
     </Provider>
   );
 }
@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "purple",
-    alignItems: "center",
-    justifyContent: "center",
+    // marginTop: StatusBar.currentHeight,
   },
 });
