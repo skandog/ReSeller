@@ -24,16 +24,39 @@ const ToDo = (props) => {
   return (
     <View>
       <TextInput
+        style={{
+          fontSize: 30,
+          marginTop: 10,
+        }}
         value={props.todo}
         onChangeText={(text) => props.updateTodo(text)}
         placeholder="Enter a to-do item"
       />
       <Button title="Add" onPress={handleSubmit} />
-      <View>
+      <View
+        style={{
+          marginTop: 10,
+        }}
+      >
         {props.todos.map((item, index) => (
-          <View key={index}>
-            <Text>{item}</Text>
-            <Button title="Delete" onPress={() => handleDelete(item)} />
+          <View
+            key={index}
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 30,
+              }}
+            >
+              {item}
+            </Text>
+            <TouchableOpacity onPress={() => handleDelete(item)}>
+              <Text style={{ marginLeft: 10, color: "tomato" }}>x</Text>
+            </TouchableOpacity>
           </View>
         ))}
       </View>
