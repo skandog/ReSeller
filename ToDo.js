@@ -12,7 +12,10 @@ import { connect } from "react-redux";
 const ToDo = (props) => {
   const handleSubmit = () => {
     if (!props.todo) {
-      Alert.alert("Error", "Please enter a to-do item");
+      Alert.alert("Error", "Please enter a to-do item", [
+        { text: "yes" },
+        { text: "no" },
+      ]);
       return;
     }
     props.addTodo(props.todo);
