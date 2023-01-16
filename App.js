@@ -13,6 +13,7 @@ import {
   Platform,
   Dimensions,
 } from "react-native";
+import { useDimensions } from "@react-native-community/hooks";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
 import store from "./store";
