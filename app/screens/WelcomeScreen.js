@@ -16,9 +16,10 @@ function WelcomeScreen(props) {
         />
         <Text style={styles.text}>Get rid of old stufff for dosh</Text>
       </View>
-      <Button title={"Login"} />
-      {/* <View style={styles.loginButton}></View> */}
-      <View style={styles.registerButton}></View>
+      <View style={styles.buttonContainer}>
+        <Button title={"Login"} />
+        <Button title={"Register"} color={"secondary"} />
+      </View>
     </ImageBackground>
   );
 }
@@ -29,6 +30,10 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
+  buttonContainer: {
+    width: "90%",
+    padding: 15,
+  },
   logo: {
     width: 150,
     height: 100,
@@ -37,16 +42,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 30,
     alignItems: "center",
-  },
-  loginButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: colors.primary,
-  },
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: colors.secondary,
   },
   text: {
     color: colors.primary,
