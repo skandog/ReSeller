@@ -20,7 +20,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <SafeAreaView style={styles.container}>
-        <Text>This is a todo app</Text>
+        {/* <Text>This is a todo app</Text>
         <TouchableHighlight onPress={() => console.log("image tapped")}>
           <Image
             fadeDuration={1000}
@@ -30,9 +30,9 @@ export default function App() {
               uri: "https://picsum.photos/200/300",
             }}
           />
-        </TouchableHighlight>
+        </TouchableHighlight> */}
         {/* Bative only really works with views, and not on iOS */}
-        <TouchableNativeFeedback>
+        {/* <TouchableNativeFeedback>
           <View
             style={{
               width: 200,
@@ -41,16 +41,16 @@ export default function App() {
               marginTop: 20,
             }}
           ></View>
-        </TouchableNativeFeedback>
+        </TouchableNativeFeedback> */}
         {/* <StatusBar style="auto" /> */}
-        <Button
+        {/* <Button
           // This only works in iOS
           title="alert.prompt"
           onPress={() => {
             Alert.prompt("Title", "Message", (text) => console.log(text));
           }}
-        />
-        <ToDo />
+        /> */}
+        {/* <ToDo /> */}
       </SafeAreaView>
     </Provider>
   );
