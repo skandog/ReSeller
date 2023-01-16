@@ -10,6 +10,7 @@ import {
   TouchableNativeFeedback,
   Alert,
   Button,
+  Platform,
 } from "react-native";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: "purple",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: StatusBar.currentHeight,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    //marginTop: StatusBar.currentHeight,
   },
 });
