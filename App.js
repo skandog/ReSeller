@@ -22,19 +22,18 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 export default function App() {
-  const { landscape } = useDeviceOrientation();
-
   return (
     <Provider store={store}>
-      <SafeAreaView style={styles.container}>
-        <View
-          style={{
-            backgroundColor: "dodgerblue",
-            width: "100%",
-            height: landscape ? "100%" : "30%",
-          }}
-        ></View>
-      </SafeAreaView>
+      <View
+        style={{
+          backgroundColor: "#fff",
+          flex: 1,
+        }}
+      >
+        <View style={{ backgroundColor: "tomato", flex: 2 }} />
+        <View style={{ backgroundColor: "dodgerblue", flex: 1 }} />
+        <View style={{ backgroundColor: "gold", flex: 1 }} />
+      </View>
     </Provider>
   );
 }
