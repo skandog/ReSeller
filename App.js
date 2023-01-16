@@ -20,41 +20,12 @@ import {
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
 import store from "./store";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <View
-        style={{
-          backgroundColor: "#fff",
-          flex: 1,
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          alignContent: "center",
-        }}
-      >
-        <View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
-        <View
-          style={{
-            backgroundColor: "dodgerblue",
-            width: 100,
-            height: 100,
-            top: -20,
-          }}
-        />
-        <View
-          style={{
-            backgroundColor: "green",
-            width: 100,
-            height: 100,
-            top: 20,
-            right: 20,
-            position: "absolute",
-          }}
-        />
-        <View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
-      </View>
+      <WelcomeScreen />
     </Provider>
   );
 }
