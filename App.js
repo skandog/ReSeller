@@ -13,13 +13,16 @@ import {
   Platform,
   Dimensions,
 } from "react-native";
-import { useDimensions } from "@react-native-community/hooks";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
 import store from "./store";
 
 export default function App() {
-  console.log(Dimensions.get("screen"));
+  const { landscape } = useDeviceOrientation();
 
   return (
     <Provider store={store}>
@@ -27,8 +30,8 @@ export default function App() {
         <View
           style={{
             backgroundColor: "dodgerblue",
-            height: "30%",
             width: "100%",
+            height: landscape ? "100%" : "30%",
           }}
         ></View>
       </SafeAreaView>
