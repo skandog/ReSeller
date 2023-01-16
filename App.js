@@ -26,8 +26,8 @@ export default function App() {
         <View
           style={{
             backgroundColor: "dodgerblue",
-            height: 70,
-            width: "50%",
+            height: "30%",
+            width: "100%",
           }}
         ></View>
       </SafeAreaView>
