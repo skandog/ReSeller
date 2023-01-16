@@ -21,11 +21,13 @@ import ToDo from "./ToDo";
 import { Provider } from "react-redux";
 import store from "./store";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <WelcomeScreen />
+      {/* <WelcomeScreen /> */}
+      <ViewImageScreen />
     </Provider>
   );
 }
