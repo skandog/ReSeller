@@ -28,11 +28,14 @@ export default function App() {
         style={{
           backgroundColor: "#fff",
           flex: 1,
+          flexDirection: "row",
         }}
       >
-        <View style={{ backgroundColor: "tomato", flex: 2 }} />
-        <View style={{ backgroundColor: "dodgerblue", flex: 1 }} />
-        <View style={{ backgroundColor: "gold", flex: 1 }} />
+        <View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
+        <View
+          style={{ backgroundColor: "dodgerblue", width: 100, height: 100 }}
+        />
+        <View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
       </View>
     </Provider>
   );
