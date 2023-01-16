@@ -11,7 +11,12 @@ import {
   Alert,
   Button,
   Platform,
+  Dimensions,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -19,39 +24,37 @@ import store from "./store";
 export default function App() {
   return (
     <Provider store={store}>
-      <SafeAreaView style={styles.container}>
-        {/* <Text>This is a todo app</Text>
-        <TouchableHighlight onPress={() => console.log("image tapped")}>
-          <Image
-            fadeDuration={1000}
-            source={{
-              width: 200,
-              height: 300,
-              uri: "https://picsum.photos/200/300",
-            }}
-          />
-        </TouchableHighlight> */}
-        {/* Bative only really works with views, and not on iOS */}
-        {/* <TouchableNativeFeedback>
-          <View
-            style={{
-              width: 200,
-              height: 70,
-              backgroundColor: "tomato",
-              marginTop: 20,
-            }}
-          ></View>
-        </TouchableNativeFeedback> */}
-        {/* <StatusBar style="auto" /> */}
-        {/* <Button
-          // This only works in iOS
-          title="alert.prompt"
-          onPress={() => {
-            Alert.prompt("Title", "Message", (text) => console.log(text));
+      <View
+        style={{
+          backgroundColor: "#fff",
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+        }}
+      >
+        <View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
+        <View
+          style={{
+            backgroundColor: "dodgerblue",
+            width: 100,
+            height: 100,
+            top: -20,
           }}
-        /> */}
-        {/* <ToDo /> */}
-      </SafeAreaView>
+        />
+        <View
+          style={{
+            backgroundColor: "green",
+            width: 100,
+            height: 100,
+            top: 20,
+            right: 20,
+            position: "absolute",
+          }}
+        />
+        <View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
+      </View>
     </Provider>
   );
 }
