@@ -8,6 +8,8 @@ import {
   Image,
   TouchableHighlight,
   TouchableNativeFeedback,
+  Alert,
+  Button,
 } from "react-native";
 import ToDo from "./ToDo";
 import { Provider } from "react-redux";
@@ -40,6 +42,13 @@ export default function App() {
           ></View>
         </TouchableNativeFeedback>
         {/* <StatusBar style="auto" /> */}
+        <Button
+          // This only works in iOS
+          title="alert.prompt"
+          onPress={() => {
+            Alert.prompt("Title", "Message", (text) => console.log(text));
+          }}
+        />
         <ToDo />
       </SafeAreaView>
     </Provider>
@@ -52,6 +61,6 @@ const styles = StyleSheet.create({
     backgroundColor: "purple",
     alignItems: "center",
     justifyContent: "center",
-    // marginTop: StatusBar.currentHeight,
+    marginTop: StatusBar.currentHeight,
   },
 });
